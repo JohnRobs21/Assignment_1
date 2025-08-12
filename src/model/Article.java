@@ -1,17 +1,17 @@
 package model;
 
 public final class Article {
-    private final String id;
+    private final int id;
     private final String title;
-    private String abstractText;
-    private final boolean computer;
-    private final boolean physics;
-    private final boolean statistics;
-    private final boolean mathematics;
-    private final boolean quantitativeBiology;
-    private final boolean quantitativeFinance;
+    private final String abstractText;
+    private final int computer;
+    private final int physics;
+    private final int statistics;
+    private final int mathematics;
+    private final int quantitativeBiology;
+    private final int quantitativeFinance;
 
-    public Article(String id, String title, String abstractText, boolean computer, boolean physics, boolean statistics, boolean mathematics, boolean quantitativeBiology, boolean quantitativeFinance) {
+    public Article(int id, String title, String abstractText, int computer, int physics, int statistics, int mathematics, int quantitativeBiology, int quantitativeFinance) {
         this.id = id;
         this.title = title;
         this.abstractText = abstractText;
@@ -23,7 +23,7 @@ public final class Article {
         this.quantitativeFinance = quantitativeFinance;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -35,45 +35,32 @@ public final class Article {
         return abstractText;
     }
 
-    public boolean isComputer() {
+    public int getComputer() {
         return computer;
     }
 
-    public boolean isPhysics() {
+    public int getPhysics() {
         return physics;
     }
 
-    public boolean isStatistics() {
+    public int getStatistics() {
         return statistics;
     }
 
-    public boolean isMathematics() {
+    public int getMathematics() {
         return mathematics;
     }
 
-    public boolean isQuantitativeBiology() {
+    public int getQuantitativeBiology() {
         return quantitativeBiology;
     }
 
-    public boolean isQuantitativeFinance() {
+    public int getQuantitativeFinance() {
         return quantitativeFinance;
     }
 
     @Override
     public String toString() {
         return id + " - " + title;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Article article = (Article) obj;
-        return id.equals(article.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return id.hashCode();
     }
 }
