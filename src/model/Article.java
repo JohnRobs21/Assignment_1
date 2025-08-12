@@ -11,16 +11,16 @@ public final class Article {
     private final boolean quantitativeBiology;
     private final boolean quantitativeFinance;
 
-    public Article(boolean quantitativeFinance, boolean quantitativeBiology, boolean mathematics, boolean statistics, boolean physics, boolean computer, String abstractText, String title, String id) {
-        this.quantitativeFinance = quantitativeFinance;
-        this.quantitativeBiology = quantitativeBiology;
-        this.mathematics = mathematics;
-        this.statistics = statistics;
-        this.physics = physics;
-        this.computer = computer;
-        this.abstractText = abstractText;
-        this.title = title;
+    public Article(String id, String title, String abstractText, boolean computer, boolean physics, boolean statistics, boolean mathematics, boolean quantitativeBiology, boolean quantitativeFinance) {
         this.id = id;
+        this.title = title;
+        this.abstractText = abstractText;
+        this.computer = computer;
+        this.physics = physics;
+        this.statistics = statistics;
+        this.mathematics = mathematics;
+        this.quantitativeBiology = quantitativeBiology;
+        this.quantitativeFinance = quantitativeFinance;
     }
 
     public String getId() {
